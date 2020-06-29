@@ -1,0 +1,407 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Tool</title>
+	 <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" type="text/css" href="css/plugin.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,300,500,600,700">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+   <link href="bootstrap-3.3.7-dist/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+   
+    <style>
+th, td {
+    text-align: left;
+}
+th, td {
+  padding: 2px;
+}
+</style>
+
+ </head>
+ <body>
+ 
+ <section id="about" class="about-section">
+        <div class="container padding-bottom-60">
+         <div class="row">
+               
+                
+             
+                <div class="about-me ">
+                  
+                  <h2 align="middle">The Repetition Component</h2>
+                  
+                  <table style="width:100%">
+  <tr>
+    <th><u>Individual Risk Factors</u></th>
+    <th><u>Ranges</u></th> 
+    <th><u>Individual Factor Scores</u></th>
+  </tr>
+
+  <tr>
+    <td>Repetitive Wrist Movement Duration</td>
+    <td>
+      <div class="dropdown">
+  <button class="dropbtn">Range</button>
+  <div class="dropdown-content">
+    <a onclick="dis1(0)"></a>
+    <a onclick="dis1(1)">2-5 hours/day</a>
+    <a onclick="dis1(2)">5-8 hours/day</a>
+    <a onclick="dis1(3)">More than 8 hours/day</a>
+  </div>
+</div>
+    </td>
+    <td><span id="disp1"></span></td>
+  </tr>
+
+  <tr>
+    <td>Repetitive Wrist Movement intensity</td>
+    <td>
+      <div class="dropdown">
+  <button class="dropbtn">Range</button>
+  <div class="dropdown-content">
+    <a onclick="dis2(1)">Cycle time 20-30s</a>
+    <a onclick="dis2(2)">Cycle time 10-20s</a>
+    <a onclick="dis2(3)">Cycle time less than 10s</a>
+  </div>
+</div>
+    </td>
+    <td><span id="disp2"></td>
+  </tr>
+
+  <tr>
+    <td>Sustained Position of Wrist Duration</td>
+    <td>
+      <div class="dropdown">
+  <button class="dropbtn">Range</button>
+  <div class="dropdown-content">
+    <a onclick="dis3(1)">Less than 65% of working time</a>
+    <a onclick="dis3(2)">65-85% of working time</a>
+    <a onclick="dis3(3)">More than 85% of working time</a>
+  </div>
+</div>
+    </td>
+    <td><span id="disp3"></td>
+  </tr>
+
+   <tr>
+    <td>Repetitive Finger Movement Duration</td>
+    <td>
+      <div class="dropdown">
+  <button class="dropbtn">Range</button>
+  <div class="dropdown-content">
+    <a onclick="dis4(1)">2-5 hours/day</a>
+    <a onclick="dis4(2)">5-8 hours/day</a>
+    <a onclick="dis4(3)">More than 8 hours/day</a>
+  </div>
+</div>
+    </td>
+    <td><span id="disp4"></td>
+  </tr>
+
+   <tr>
+    <td>Sustained Position of Finger Duration</td>
+    <td><div class="dropdown">
+  <button class="dropbtn">Range</button>
+  <div class="dropdown-content">
+    <a onclick="dis5(1)">Less than 65% of working time</a>
+    <a onclick="dis5(2)">65-85% of working time</a>
+    <a onclick="dis5(3)">More than 85% of working time</a>
+  </div>
+</div></td>
+    <td><span id="disp5"></td>
+  </tr>
+
+  
+</table>
+<br><br><br>
+<div align="left" style="display: flex">
+  <h4 style="flex: 0.7">
+  Total Risk Score of the Repetition Component:
+  </h4>
+  <h4 id="sumd1" style="flex: 1"></h4>
+</div>
+
+<button onclick="sum1(1)"> ∑scores </button>
+                 </div>
+             
+              </div>
+
+
+           
+          </div>
+       </section>
+
+
+
+
+
+<section id="about" class="about-section">
+        <div class="container padding-bottom-60">
+         <div class="row">
+               
+                
+             
+                <div class="about-me ">
+                  
+                  <h2 align="middle">The Force Exertion Component</h2>
+                  
+                  <table style="width:100%">
+  <tr>
+    <th><u>Individual Risk Factors</u></th>
+    <th><u>Ranges</u></th> 
+    <th><u>Individual Factor Scores</u></th>
+  </tr>
+  <tr>
+    <td>Intensity of Forceful Exertion by One Hand</td>
+    <td>
+      <div class="dropdown">
+  <button class="dropbtn">Range</button>
+  <div class="dropdown-content">
+    <a onclick="dis6(1)">Less than 1kg</a>
+    <a onclick="dis6(2)">1-4 kg</a>
+    <a onclick="dis6(3)">More than 4kg</a>
+  </div>
+</div>
+    </td>
+    <td><span id="disp6"></td>
+  </tr>
+  <tr>
+    <td>Duration of Forceful Exertion by Hand</td>
+    <td>
+      <div class="dropdown">
+  <button class="dropbtn">Range</button>
+  <div class="dropdown-content">
+    <a onclick="dis7(1)">20-40% of the working time</a>
+    <a onclick="dis7(2)">40-60% of the working time</a>
+    <a onclick="dis7(3)">More than 60% of the working time</a>
+  </div>
+</div>
+    </td>
+    <td><span id="disp7"></td>
+  </tr>
+  
+</table>
+<br><br><br><br><br><br><br><br>
+             
+             <div align="left" style="display: flex">
+  <h4 style="flex: 0.7">
+  Total Risk Score of the Force Exertion Component:
+  </h4>
+  <h4 id="sumd2" style="flex: 1"></h4>
+</div>
+
+<button onclick="sum2(1)"> ∑scores </button>
+                 </div>
+              </div>
+
+
+           
+          </div>
+       </section>
+
+
+<section id="about" class="about-section">
+        <div class="container padding-bottom-60">
+         <div class="row">
+               
+                
+             
+                <div class="about-me ">
+                  
+                  <h2 align="middle">The Finger Posture Component</h2>
+                  
+                  <table style="width:100%">
+  <tr>
+    <th><u>Individual Risk Factors</u></th>
+    <th><u>Ranges</u></th> 
+    <th><u>Individual Factor Scores</u></th>
+  </tr>
+  <tr>
+    <td>Finger Flexion Duration</td>
+    <td>
+      <div class="dropdown">
+  <button class="dropbtn">Range</button>
+  <div class="dropdown-content">
+    <a onclick="dis8(1)">2-5 hours/day</a>
+    <a onclick="dis8(2)">5-8 hours/day</a>
+    <a onclick="dis8(3)">More than 8 hours/day</a>
+  </div>
+</div>
+    </td>
+    <td><span id="disp8"></td>
+  </tr>
+  <tr>
+    <td>Finger Extension Duration</td>
+    <td>
+      <div class="dropdown">
+  <button class="dropbtn">Range</button>
+  <div class="dropdown-content">
+    <a onclick="dis9(1)">2-5 hours/day</a>
+    <a onclick="dis9(2)">5-8 hours/day</a>
+    <a onclick="dis9(3)">More than 8 hours/day</a>
+  </div>
+</div>
+    </td>
+    <td><span id="disp9"></td>
+  </tr>
+  
+</table>
+<br><br><br><br><br><br><br><br>
+<div align="left" style="display: flex">
+  <h4 style="flex: 0.7">
+  Total Risk Score of the Finger Posture Component:
+  </h4>
+  <h4 id="sumd3" style="flex: 1"></h4>
+</div>
+
+<button onclick="sum3(1)"> ∑scores </button>
+                 </div>
+             
+              </div>
+
+
+           
+          </div>
+       </section>
+
+
+
+
+<section id="about" class="about-section">
+        <div class="container padding-bottom-60">
+         <div class="row">
+               
+                
+             
+                <div class="about-me ">
+                  
+                  <h2 align="middle">The Vibration on Hand Component</h2>
+                  
+                  <table style="width:100%">
+  <tr>
+    <th><u>Individual Risk Factors</u></th>
+    <th><u>Ranges</u></th> 
+    <th><u>Individual Factor Scores</u></th>
+  </tr>
+  <tr>
+    <td>Vibration on Hand Duration</td>
+    <td>
+      <div class="dropdown">
+  <button class="dropbtn">Range</button>
+  <div class="dropdown-content">
+    <a onclick="dis0(1)">Less than 1 hour/day</a>
+    <a onclick="dis0(2)">1-6 hour/day</a>
+    <a onclick="dis0(3)">More than 6 hours/day</a>
+  </div>
+</div>
+    </td>
+    <td><span id="disp0"></td>
+  </tr>
+  <tr>
+    <td>Vibration of the Instrument Intensity</td>
+    <td>
+      <div class="dropdown">
+  <button class="dropbtn">Range</button>
+  <div class="dropdown-content">
+    <a onclick="disa(1)">Less than 10m/s2</a>
+    <a onclick="disa(2)">10-15m/s2</a>
+    <a onclick="disa(3)">More than 15m/s2</a>
+  </div>
+</div>
+    </td>
+    <td><span id="dispa"></td>
+  </tr>
+  
+</table>
+<br><br><br><br><br><br><br><br>
+<div align="left" style="display: flex">
+  <h4 style="flex: 0.7">
+  Total Risk Score of the Vibration on Hand Component:
+  </h4>
+  <h4 id="sumd4" style="flex: 1"></h4>
+</div>
+
+<button onclick="sum4(1)"> ∑scores </button>
+                  </div>
+             
+              </div>
+
+
+           
+          </div>
+       </section>
+
+
+       <section id="about" class="about-section">
+        <div class="container padding-bottom-60">
+         <div class="row">
+               
+                
+             
+                <div class="about-me ">
+                  
+                  <h2 align="middle">The Wrist Flexion Component</h2>
+                  
+                  <table style="width:100%">
+  <tr>
+    <th><u>Individual Risk Factors</u></th>
+    <th><u>Ranges</u></th> 
+    <th><u>Individual Factor Scores</u></th>
+  </tr>
+  <tr>
+    <td>Wrist Flexion Duration</td>
+    <td>
+      <div class="dropdown">
+  <button class="dropbtn">Range</button>
+  <div class="dropdown-content">
+    <a onclick="disb(1)">2-5 hours/day</a>
+    <a onclick="disb(2)">5-8 hours/day</a>
+    <a onclick="disb(3)">More than 8 hours/day</a>
+  </div>
+</div>
+    </td>
+    <td><span id="dispb"></td>
+  </tr>
+  
+</table>
+<br><br><br><br><br><br><br><br>
+<div align="left" style="display: flex">
+  <h4 style="flex: 0.7">
+  Total Risk Score of the Wrist Flexion Component:
+  </h4>
+  <h4 id="sumd5" style="flex: 1"></h4>
+</div>
+
+<button onclick="sum5(1)"> ∑scores </button>
+                 </div>
+              </div>
+
+
+           
+          </div>
+       </section>
+
+<p align="center">
+<span><a href="file:///C:/Users/Yash%20Bajoria%20(Freak)/Desktop/iitproject/total.html" class="btn btn-default" style="background-color: yellow">Final Estimation -></a></span>
+
+</p>
+
+ <!-- All Javascript Plugins  -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/plugin.js"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyC0HAKwKinpoFKNGUwRBgkrKhF-sIqFUNA"></script>
+    
+    <!-- Main Javascript File  -->
+    <script type="text/javascript" src="js/scripts.js"></script>
+
+        
+ </body>
+ </html>
